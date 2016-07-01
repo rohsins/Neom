@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\itm_arm.o"
+".\objects\ringbuffer.o"
+"C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib"
+".\objects\rtx_conf_cm.o"
+".\objects\emac_lpc17xx.o"
+".\objects\uart_lpc17xx.o"
+".\objects\phy_lan8720.o"
+".\objects\gpdma_lpc17xx.o"
+".\objects\gpio_lpc17xx.o"
+".\objects\pin_lpc17xx.o"
+".\objects\startup_lpc17xx.o"
+".\objects\system_lpc17xx.o"
+".\objects\net_config.o"
+"C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\ARM\Net4_CM3_L.lib"
+".\objects\net_legacy.o"
+--library_type=microlib
+--feedback ".\Objects\Neom.fed" --feedback_image=none
+--strict --scatter ".\Objects\Neom.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Neom.map" -o .\Objects\Neom.axf
