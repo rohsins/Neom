@@ -1,5 +1,5 @@
 Dependencies for Project 'Neom', Target 'Release': (DO NOT MODIFY !)
-F (.\main.cpp)(0x57762B49)(--cpp -c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.cpp)(0x57790A15)(--cpp -c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF51D9C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cm3.h)(0x5735B542)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE6282)
@@ -22,7 +22,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_MAC
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x57354E4C)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net.h)(0x557FDDCA)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_ds.h)(0x5620C03A)
-I (D:\Keil\Neom\RTE\RTE_Components.h)(0x5776162B)
+I (D:\Keil\Neom\RTE\RTE_Components.h)(0x577908F3)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_legacy.h)(0x55810D0A)
 F (.\ITM_ARM.cpp)(0x57453C05)(--cpp -c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\itm_arm.o --omf_browse .\objects\itm_arm.crf --depend .\objects\itm_arm.d)
 I (ITM_ARM.h)(0x57453D1E)
@@ -46,7 +46,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE6282)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE6282)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE6280)
 I (D:\Keil\Neom\RTE\Device\LPC1768\RTE_Device.h)(0x5775FFDF)
-I (D:\Keil\Neom\RTE\RTE_Components.h)(0x5776162B)
+I (D:\Keil\Neom\RTE\RTE_Components.h)(0x577908F3)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5735B544)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF51D9C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cm3.h)(0x5735B542)
@@ -72,7 +72,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE6280)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver\PIN_LPC17xx.h)(0x5582653E)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver\GPDMA_LPC17xx.h)(0x557FAAE8)
 I (D:\Keil\Neom\RTE\Device\LPC1768\RTE_Device.h)(0x5775FFDF)
-I (D:\Keil\Neom\RTE\RTE_Components.h)(0x5776162B)
+I (D:\Keil\Neom\RTE\RTE_Components.h)(0x577908F3)
 F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Driver\PHY_LAN8720.c)(0x565407C8)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x -DETH_PHY_ADDR="0x1"-o .\objects\phy_lan8720.o --omf_browse .\objects\phy_lan8720.crf --depend .\objects\phy_lan8720.d)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Driver\PHY_LAN8720.h)(0x56946BEA)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x57354E4C)
@@ -119,8 +119,25 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cminstr.h)(0x573
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\cmsis_armcc.h)(0x57354E4A)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include\core_cmfunc.h)(0x57354E4A)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA50B10)
+F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\ARM\Net4_CM3_L.lib)(0x5715F9A2)()
+F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\Net_Legacy.c)(0x56163088)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\net_legacy.o --omf_browse .\objects\net_legacy.crf --depend .\objects\net_legacy.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE6282)
+I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_lib.h)(0x5715C044)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_USART.h)(0x57354E4C)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_Common.h)(0x57354E4C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE6282)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE6282)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE6280)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_MAC.h)(0x57354E4C)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH.h)(0x57354E4C)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x57354E4C)
+I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\net_modem.h)(0x567B828C)
+I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_ds.h)(0x5620C03A)
+I (D:\Keil\Neom\RTE\RTE_Components.h)(0x577908F3)
+I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_legacy.h)(0x55810D0A)
+I (D:\Keil\Neom\RTE\Network\Net_Config_Legacy.h)(0x57060E7E)
 F (RTE\Network\Net_Config.c)(0x57761667)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\net_config.o --omf_browse .\objects\net_config.crf --depend .\objects\net_config.d)
-I (D:\Keil\Neom\RTE\RTE_Components.h)(0x5776162B)
+I (D:\Keil\Neom\RTE\RTE_Components.h)(0x577908F3)
 I (RTE\Network\Net_Config_ETH_0.h)(0x577615E2)
 I (RTE\Network\Net_Config_UDP.h)(0x57060E7E)
 I (RTE\Network\Net_Config_TCP.h)(0x57060E7E)
@@ -141,23 +158,6 @@ I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_ds.h)(0x
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_legacy.h)(0x55810D0A)
 F (RTE\Network\Net_Config_BSD.h)(0x57060E7E)()
 F (RTE\Network\Net_Config_ETH_0.h)(0x577615E2)()
+F (RTE\Network\Net_Config_Legacy.h)(0x57060E7E)()
 F (RTE\Network\Net_Config_TCP.h)(0x57060E7E)()
 F (RTE\Network\Net_Config_UDP.h)(0x57060E7E)()
-F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\ARM\Net4_CM3_L.lib)(0x5715F9A2)()
-F (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\Net_Legacy.c)(0x56163088)(-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O3 --apcs=interwork --split_sections-I D:\Keil\Neom\RTE-I D:\Keil\Neom\RTE\Device\LPC1768-I D:\Keil\Neom\RTE\Network-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\RTOS\RTX\INC-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\RTE_Driver-I C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include-D__UVISION_VERSION="520" -D_RTE_ -DLPC175x_6x-o .\objects\net_legacy.o --omf_browse .\objects\net_legacy.crf --depend .\objects\net_legacy.d)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE6282)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_lib.h)(0x5715C044)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_USART.h)(0x57354E4C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_Common.h)(0x57354E4C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE6282)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE6282)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE6280)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_MAC.h)(0x57354E4C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH.h)(0x57354E4C)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Driver\Include\Driver_ETH_PHY.h)(0x57354E4C)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\net_modem.h)(0x567B828C)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_ds.h)(0x5620C03A)
-I (D:\Keil\Neom\RTE\RTE_Components.h)(0x5776162B)
-I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Include\rl_net_legacy.h)(0x55810D0A)
-I (D:\Keil\Neom\RTE\Network\Net_Config_Legacy.h)(0x57060E7E)
-F (RTE\Network\Net_Config_Legacy.h)(0x57060E7E)()

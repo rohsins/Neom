@@ -22,11 +22,11 @@ Dialog DLL:      TARMP1.DLL V1.25.0.0
  
 <h2>Project:</h2>
 D:\Keil\Neom\Neom.uvprojx
-Project File Date:  07/01/2016
+Project File Date:  07/03/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Release'
+Build target 'Release'
 Clean started - Project: 'Neom'
    deleting intermediate output files for target 'Release'
 compiling main.cpp...
@@ -41,10 +41,10 @@ compiling GPIO_LPC17xx.c...
 compiling PIN_LPC17xx.c...
 assembling startup_LPC17xx.s...
 compiling system_LPC17xx.c...
-compiling Net_Config.c...
 compiling Net_Legacy.c...
+compiling Net_Config.c...
 linking...
-Program Size: Code=25212 RO-data=1556 RW-data=184 ZI-data=29168  
+Program Size: Code=25200 RO-data=1564 RW-data=184 ZI-data=29168  
 ".\Objects\Neom.axf" - 0 Error(s), 0 Warning(s).
 
 *** Performing Cross-Module-Optimization:
@@ -57,10 +57,10 @@ compiling GPDMA_LPC17xx.c...
 compiling GPIO_LPC17xx.c...
 compiling PIN_LPC17xx.c...
 compiling system_LPC17xx.c...
-compiling Net_Config.c...
 compiling Net_Legacy.c...
+compiling Net_Config.c...
 linking...
-Program Size: Code=25212 RO-data=1556 RW-data=184 ZI-data=29168  
+Program Size: Code=25200 RO-data=1564 RW-data=184 ZI-data=29168  
 ".\Objects\Neom.axf" - 0 Error(s), 0 Warning(s).
 *** Completed Cross-Module-Optimization after 2 iteration(s).
 
@@ -72,8 +72,8 @@ Package Vendor: ARM
                 CMSIS (Cortex Microcontroller Software Interface Standard)
    * Component: Ethernet MAC Version: 2.01
    * Component: RTOS Version: 1.0
-   * Component: USART Version: 2.02
    * Component: Ethernet PHY Version: 2.00
+   * Component: USART Version: 2.02
    * Component: Keil RTX Version: 4.81.0
    * Component: CORE Version: 5.0.0
 
@@ -84,8 +84,8 @@ Package Vendor: Keil
    * Component: Startup Version: 1.0.0
    * Component: PIN Version: 1.0
    * Component: GPIO Version: 1.1
-   * Component: USART Version: 2.4
    * Component: GPDMA Version: 1.2
+   * Component: USART Version: 2.4
    * Component: Ethernet MAC Version: 2.9
 
 Package Vendor: Keil
@@ -93,12 +93,12 @@ Package Vendor: Keil
                 Keil::CMSIS Driver:Ethernet PHY:LAN8720:6.1
                 Keil MDK-ARM Professional Middleware for ARM Cortex-M based devices
    * Component: LAN8720 Version: 6.1
-   * Component: BSD Version: 7.1.0
-   * Component: TCP Version: 7.1.0
+   * Component: Legacy API Version: 7.1.0
    * Component: ETH Version: 7.1.0
    * Component: CORE Variant: IPv4 Release Version: 7.1.0
-   * Component: Legacy API Version: 7.1.0
+   * Component: BSD Version: 7.1.0
    * Component: UDP Version: 7.1.0
+   * Component: TCP Version: 7.1.0
 
 <h2>Collection of Component include folders:</h2>
   D:\Keil\Neom\RTE
@@ -118,49 +118,49 @@ Package Vendor: Keil
 
    * Component: ::CMSIS:RTOS:1.0 (API)
 
-   * Component: ::CMSIS Driver:USART:2.02 (API)
-      Include file:  CMSIS\Driver\Include\Driver_USART.h
-
    * Component: ::CMSIS Driver:Ethernet PHY:2.00 (API)
       Include file:  CMSIS\Driver\Include\Driver_ETH_PHY.h
 
+   * Component: ::CMSIS Driver:USART:2.02 (API)
+      Include file:  CMSIS\Driver\Include\Driver_USART.h
+
    * Component: ARM::CMSIS:RTOS:Keil RTX:4.81.0
-      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
       Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
-      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
-      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
       Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
+      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib
 
    * Component: ARM::CMSIS:CORE:5.0.0
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_LPC17xx.s
       Include file:  Device\Include\LPC17xx.h
       Source file:   Device\Source\system_LPC17xx.c
       Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\ARM\startup_LPC17xx.s
 
    * Component: Keil::Device:PIN:1.0
-      Source file:   RTE_Driver\PIN_LPC17xx.c
       Include file:  RTE_Driver\PIN_LPC17xx.h
+      Source file:   RTE_Driver\PIN_LPC17xx.c
 
    * Component: Keil::Device:GPIO:1.1
       Source file:   RTE_Driver\GPIO_LPC17xx.c
       Include file:  RTE_Driver\GPIO_LPC17xx.h
 
-   * Component: Keil::CMSIS Driver:USART:2.4
-      Source file:   RTE_Driver\UART_LPC17xx.c
-
    * Component: Keil::Device:GPDMA:1.2
       Include file:  RTE_Driver\GPDMA_LPC17xx.h
       Source file:   RTE_Driver\GPDMA_LPC17xx.c
+
+   * Component: Keil::CMSIS Driver:USART:2.4
+      Source file:   RTE_Driver\UART_LPC17xx.c
 
    * Component: Keil::CMSIS Driver:Ethernet MAC:2.9
       Source file:   RTE_Driver\EMAC_LPC17xx.c
@@ -168,29 +168,29 @@ Package Vendor: Keil
    * Component: Keil::CMSIS Driver:Ethernet PHY:LAN8720:6.1
       Source file:   Network\Driver\PHY_LAN8720.c
 
-   * Component: Keil.MDK-Pro::Network:Socket:BSD:7.1.0
-      Source file:   Network\Config\Net_Config_BSD.h
-
-   * Component: Keil.MDK-Pro::Network:Socket:TCP:7.1.0
-      Source file:   Network\Template\TCP_Socket_Server.c
-      Source file:   Network\Config\Net_Config_TCP.h
-      Source file:   Network\Template\TCP_Socket_Client.c
+   * Component: Keil.MDK-Pro::Network:Legacy API:7.1.0
+      Include file:  Network\Config\Net_Config_Legacy.h
+      Source file:   Network\Lib\Net_Legacy.c
 
    * Component: Keil.MDK-Pro::Network:Interface:ETH:7.1.0
       Source file:   Network\Config\Net_Config_ETH.h
 
    * Component: Keil.MDK-Pro::Network:CORE:IPv4 Release:7.1.0
+      Source file:   Network\Config\Net_Config.c
       Library file:  Network\Lib\ARM\Net4_CM3_L.lib
       Include file:  Network\Include\rl_net.h
-      Source file:   Network\Config\Net_Config.c
 
-   * Component: Keil.MDK-Pro::Network:Legacy API:7.1.0
-      Source file:   Network\Lib\Net_Legacy.c
-      Include file:  Network\Config\Net_Config_Legacy.h
+   * Component: Keil.MDK-Pro::Network:Socket:BSD:7.1.0
+      Source file:   Network\Config\Net_Config_BSD.h
 
    * Component: Keil.MDK-Pro::Network:Socket:UDP:7.1.0
-      Source file:   Network\Template\UDP_Socket.c
       Source file:   Network\Config\Net_Config_UDP.h
+      Source file:   Network\Template\UDP_Socket.c
+
+   * Component: Keil.MDK-Pro::Network:Socket:TCP:7.1.0
+      Source file:   Network\Template\TCP_Socket_Client.c
+      Source file:   Network\Config\Net_Config_TCP.h
+      Source file:   Network\Template\TCP_Socket_Server.c
 Build Time Elapsed:  00:00:04
 </pre>
 </body>

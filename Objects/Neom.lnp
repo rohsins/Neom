@@ -12,9 +12,9 @@
 ".\objects\pin_lpc17xx.o"
 ".\objects\startup_lpc17xx.o"
 ".\objects\system_lpc17xx.o"
-".\objects\net_config.o"
 "C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Network\Lib\ARM\Net4_CM3_L.lib"
 ".\objects\net_legacy.o"
+".\objects\net_config.o"
 --library_type=microlib
 --feedback ".\Objects\Neom.fed" --feedback_image=none
 --strict --scatter ".\Objects\Neom.sct"

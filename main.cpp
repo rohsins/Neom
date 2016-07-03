@@ -261,7 +261,7 @@ uint32_t tcp_cb_func (int32_t socket, netTCP_Event event, const NET_ADDR *addr, 
 			int i = 0;
 			memset(tempwhat, 0, sizeof(tempwhat));
 			while (i < len) {
-				tempwhat[i] = buf[i];
+				tempwhat[i] = buf[i+2];
 				i++;
 			}
       break;
@@ -287,23 +287,23 @@ void heartBeatThread(void const *arg) {
 		osDelay(1000);
 		if (ethernetDataFlag == true) {
 			ethernetDataFlag = false;
-			char checkstring[32]={'\0','\x06','A','l','t','i','u','m','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
-	//			char checkstring1[32]={'\0','\x06','A','l','t','i','u','m','\0'};
-			if (strcmp(tempwhat, checkstring) == 0) {
+//			char checkstring[32]={'\0','\x06','A','l','t','i','u','m','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
+			char checkstring1[32]={'A','l','t','i','u','m','\0'};
+			if (strncmp(tempwhat, checkstring1, 6) == 0) {
 				if (triacToggle == false) {
 					LPC_GPIO0->FIOCLR1 = 0X04;
 					triacToggle = true;
-					int s = 10;
-					while (s > 1) {
-						LPC_GPIO1->FIOCLR2 = 0XFF;
-						osDelay(100);
-						LPC_GPIO1->FIOSET2 = 0XFF;
-						osDelay(100);
-						s--;
-					}
 				} else { 
 					LPC_GPIO0->FIOSET1 = 0X04;
 					triacToggle = false;
+				}
+				int s = 10;
+				while (s > 1) {
+					LPC_GPIO1->FIOCLR2 = 0XFF;
+					osDelay(100);
+					LPC_GPIO1->FIOSET2 = 0XFF;
+					osDelay(100);
+					s--;
 				}
 			}
 		}
