@@ -234,7 +234,7 @@ uint32_t tcp_cb_func (int32_t socket, netTCP_Event event, const NET_ADDR *addr, 
             addr->addr[1] == 168  &&
             addr->addr[2] == 5    &&
             addr->addr[3] == 117) {
-							ethernetDataFlag = true;
+//							ethernetDataFlag = true;
 //						itmPrintln("received from mobile");
           return (1);
         }
@@ -258,10 +258,11 @@ uint32_t tcp_cb_func (int32_t socket, netTCP_Event event, const NET_ADDR *addr, 
       break;
  
     case netTCP_EventData:
+			ethernetDataFlag = true;
 			int i = 0;
 			memset(tempwhat, 0, sizeof(tempwhat));
 			while (i < len) {
-				tempwhat[i] = buf[i];
+				tempwhat[i] = buf[i+2];
 				i++;
 			}
       break;
@@ -273,9 +274,9 @@ void socketListen(void) {
 	tcp_sock = netTCP_GetSocket (tcp_cb_func);
 	if (tcp_sock >= 0) {
 		netTCP_Listen (tcp_sock, 60200);	
-		netTCP_SetOption (tcp_sock, netTCP_OptionTimeout, 30);
-		netTCP_SetOption (tcp_sock, netTCP_OptionKeepAlive, 1);
-		netTCP_SetOption (tcp_sock, netTCP_OptionDelayedACK, 1);
+		netTCP_SetOption (tcp_sock, netTCP_OptionTimeout, 10);
+//		netTCP_SetOption (tcp_sock, netTCP_OptionKeepAlive, 1);
+//		netTCP_SetOption (tcp_sock, netTCP_OptionDelayedACK, 0);
 	}
 }
 
@@ -287,23 +288,24 @@ void heartBeatThread(void const *arg) {
 		osDelay(1000);
 		if (ethernetDataFlag == true) {
 			ethernetDataFlag = false;
-			char checkstring[32]={'\0','\x06','A','l','t','i','u','m','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
-	//			char checkstring1[32]={'\0','\x06','A','l','t','i','u','m','\0'};
-			if (strcmp(tempwhat, checkstring) == 0) {
+			itmPrintln(tempwhat);
+//			char checkstring[32]={'\0','\x06','A','l','t','i','u','m','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
+			char checkstring1[32]={'A','l','t','i','u','m'};
+			if (strncmp(tempwhat, checkstring1,6) == 0) {
 				if (triacToggle == false) {
 					LPC_GPIO0->FIOCLR1 = 0X04;
 					triacToggle = true;
-					int s = 10;
-					while (s > 1) {
-						LPC_GPIO1->FIOCLR2 = 0XFF;
-						osDelay(100);
-						LPC_GPIO1->FIOSET2 = 0XFF;
-						osDelay(100);
-						s--;
-					}
 				} else { 
 					LPC_GPIO0->FIOSET1 = 0X04;
 					triacToggle = false;
+				}
+				int s = 10;
+				while (s > 1) {
+					LPC_GPIO1->FIOCLR2 = 0XFF;
+					osDelay(100);
+					LPC_GPIO1->FIOSET2 = 0XFF;
+					osDelay(100);
+					s--;
 				}
 			}
 		}

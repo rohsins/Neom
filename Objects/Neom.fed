@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060183: Last Updated: Fri Jul 01 14:20:29 2016
+;#<FEEDBACK># ARM Linker, 5060183: Last Updated: Sun Jul 03 18:27:32 2016
 ;VERSION 0.2
 ;FILE emac_lpc17xx.o
 __asm___14_EMAC_LPC17xx_c_f63b8310____REV16 <= USED 0
@@ -31,7 +31,6 @@ _free_box <= USED 0
 os_set_env <= USED 0
 rt_set_PSP <= USED 0
 ;FILE itm_arm.o
-_Z10itmPrintlnPc <= USED 0
 _Z11itmPrintInti <= USED 0
 _Z13itmPrintlnInti <= USED 0
 _Z8itmPrintPc <= USED 0
@@ -50,12 +49,10 @@ __asm___8_main_cpp_6277ca0f___Z7__REVSHi <= USED 0
 netIP_aton <= USED 0
 netIP_ntoa <= USED 0
 netMAC_ntoa <= USED 0
-net_addr4_ntoa <= USED 0
 net_addr_comp <= USED 0
 net_addr_copy <= USED 0
 net_addr_get_lhost <= USED 0
 net_addr_ntoa <= USED 0
-net_mac_ntoa <= USED 0
 ;FILE net_arp.o
 netARP_CacheIP <= USED 0
 netARP_CacheMAC <= USED 0
@@ -96,6 +93,7 @@ net_ppp_get_option <= USED 0
 net_ppp_set_option <= USED 0
 net_slip_get_option <= USED 0
 net_slip_set_option <= USED 0
+;FILE net_debug.o
 ;FILE net_eth.o
 net_eth_get_addr <= USED 0
 net_eth_get_option <= USED 0
@@ -178,6 +176,12 @@ PIN_ConfigureTPIU <= USED 0
 __asm___13_PIN_LPC17xx_c_ccddbb0a____REV16 <= USED 0
 __asm___13_PIN_LPC17xx_c_ccddbb0a____REVSH <= USED 0
 __asm___13_PIN_LPC17xx_c_ccddbb0a____RRX <= USED 0
+;FILE retarget_io.o
+ITM_ReceiveChar <= USED 0
+__aeabi_assert <= USED 0
+__backspace <= USED 0
+abort <= USED 0
+fgetc <= USED 0
 ;FILE ringbuffer.o
 _ZN10RingBuffer14ringBufferReadEPc <= USED 0
 _ZN10RingBuffer15ringBufferWriteEc <= USED 0

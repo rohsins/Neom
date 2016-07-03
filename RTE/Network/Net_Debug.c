@@ -15,7 +15,7 @@
 
 // <e>System Debug
 // <i>Enable printing system debug messages
-#define DBG_SYSTEM_EN           1
+#define DBG_SYSTEM_EN           0
 
 //   <o>Memory Management  <0=>Off <1=>Errors only <2=>Full debug
 //   <i>Configure Dynamic Memory Management debugging
@@ -40,7 +40,7 @@
 
 // <e>IPv4 Core Debug
 // <i>Enable printing IPv4 debug messages
-#define DBG_CORE4_EN            1
+#define DBG_CORE4_EN            0
 
 //   <o>IP4 Core  <0=>Off <1=>Errors only <2=>Full debug
 //   <i>Configure IPv4 Core/localhost debugging
@@ -90,7 +90,7 @@
 
 // <e>Socket Debug
 // <i>Enable printing socket debug messages
-#define DBG_SOCKET_EN           0
+#define DBG_SOCKET_EN           1
 
 //   <o>UDP Socket  <0=>Off <1=>Errors only <2=>Full debug
 //   <i>Configure native UDP Socket debugging
@@ -98,7 +98,7 @@
 
 //   <o>TCP Socket  <0=>Off <1=>Errors only <2=>Full debug
 //   <i>Configure native TCP Socket debugging
-#define DBG_TCP_SOCKET          1
+#define DBG_TCP_SOCKET          2
 
 //   <o>BSD Socket  <0=>Off <1=>Errors only <2=>Full debug
 //   <i>Configure BSD Socket Interface debugging
