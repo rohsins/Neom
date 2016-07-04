@@ -224,6 +224,14 @@ void ledInitialize(void) {
 	LPC_PINCON->PINMODE_OD0 = 0x00;
 	LPC_GPIO0->FIODIR1 = 0x04;
 	LPC_GPIO0->FIOSET1 = 0X04;
+	
+	//for mosfet and siren 1.29 and 1.31
+	LPC_PINCON->PINSEL3 &= (~(1 << 29 | 1 << 31));
+	LPC_PINCON->PINMODE3 = 0x00;
+	LPC_PINCON->PINMODE_OD1 = 0x00;
+	LPC_GPIO1->FIODIR3 = 0xA0;
+	LPC_GPIO1->FIOSET3 = 0XA0;
+	
 }                                                                                                                                      
 
 uint32_t tcp_cb_func (int32_t socket, netTCP_Event event, const NET_ADDR *addr, const uint8_t *buf, uint32_t len) {
@@ -292,9 +300,11 @@ void heartBeatThread(void const *arg) {
 			if (strncmp(tempwhat, checkstring1, 6) == 0) {
 				if (triacToggle == false) {
 					LPC_GPIO0->FIOCLR1 = 0X04;
+					LPC_GPIO1->FIOSET3 = 0XA0;
 					triacToggle = true;
 				} else { 
 					LPC_GPIO0->FIOSET1 = 0X04;
+					LPC_GPIO1->FIOCLR3 = 0XA0;
 					triacToggle = false;
 				}
 				int s = 10;
