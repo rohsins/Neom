@@ -274,8 +274,8 @@ void socketListen(void) {
 	if (tcp_sock >= 0) {
 		netTCP_Listen (tcp_sock, 60200);	
 		netTCP_SetOption (tcp_sock, netTCP_OptionTimeout, 30);
-		netTCP_SetOption (tcp_sock, netTCP_OptionKeepAlive, 1);
-		netTCP_SetOption (tcp_sock, netTCP_OptionDelayedACK, 1);
+		netTCP_SetOption (tcp_sock, netTCP_OptionKeepAlive, 0);
+		netTCP_SetOption (tcp_sock, netTCP_OptionDelayedACK, 0);
 	}
 }
 
