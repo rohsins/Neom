@@ -218,6 +218,13 @@ void ledInitialize(void) {
 	LPC_GPIO1->FIODIR2 = 0xFF;
 	LPC_GPIO1->FIOSET2 = 0XFF;
 	
+	//usb connect led (led4)	
+	LPC_PINCON->PINSEL4 = 0x00;
+	LPC_PINCON->PINMODE4 = 0x00;
+	LPC_PINCON->PINMODE_OD2 = 0x00;
+	LPC_GPIO2->FIODIR1 = 0x02;
+	LPC_GPIO2->FIOSET1 = 0X02;
+	
 	/* for triac gpio control */
 	LPC_PINCON->PINSEL0 = 0x00;
 	LPC_PINCON->PINMODE1 = 0x00;
@@ -230,7 +237,7 @@ void ledInitialize(void) {
 	LPC_PINCON->PINMODE3 = 0x00;
 	LPC_PINCON->PINMODE_OD1 = 0x00;
 	LPC_GPIO1->FIODIR3 = 0xA0;
-	LPC_GPIO1->FIOSET3 = 0XA0;
+	LPC_GPIO1->FIOCLR3 = 0XA0;
 	
 }                                                                                                                                      
 
@@ -301,10 +308,12 @@ void heartBeatThread(void const *arg) {
 				if (triacToggle == false) {
 					LPC_GPIO0->FIOCLR1 = 0X04;
 					LPC_GPIO1->FIOSET3 = 0XA0;
+					LPC_GPIO2->FIOCLR1 = 0X02;
 					triacToggle = true;
 				} else { 
 					LPC_GPIO0->FIOSET1 = 0X04;
 					LPC_GPIO1->FIOCLR3 = 0XA0;
+					LPC_GPIO2->FIOSET1 = 0X02;
 					triacToggle = false;
 				}
 				int s = 10;
