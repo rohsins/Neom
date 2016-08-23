@@ -36,6 +36,8 @@ bool DHCP_enabled      = false;
 
 bool ethernetDataFlag = false;
 bool triacToggle = false;
+bool Toggle1 = false;
+bool Toggle2 = false;
 
 int32_t tcp_sock;
 char tempwhat[32];
@@ -245,15 +247,17 @@ uint32_t tcp_cb_func (int32_t socket, netTCP_Event event, const NET_ADDR *addr, 
   switch (event) {
     case netTCP_EventConnect:
       if (addr->addr_type == NET_ADDR_IP4) {
-        if (addr->addr[0] == 192  &&
-            addr->addr[1] == 168  &&
-            addr->addr[2] == 5    &&
-            addr->addr[3] == 117) {
+//        if (addr->addr[0] == 192  &&
+//            addr->addr[1] == 168  &&
+//            addr->addr[2] == 5    &&
+//            addr->addr[3] == 117) 
+				{
 							ethernetDataFlag = true;
 //						itmPrintln("received from mobile");
           return (1);
         }
       }
+//			return (1);
       return (0);
  
     case netTCP_EventEstablished:
@@ -300,22 +304,82 @@ void heartBeatThread(void const *arg) {
 		osDelay(70);
 		LPC_GPIO1->FIOSET2 = 0XFF;
 		osDelay(1000);
+		
 		if (ethernetDataFlag == true) {
 			ethernetDataFlag = false;
 //			char checkstring[32]={'\0','\x06','A','l','t','i','u','m','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
-			char checkstring1[32]={'A','l','t','i','u','m','\0'};
-			if (strncmp(tempwhat, checkstring1, 6) == 0) {
-				if (triacToggle == false) {
-					LPC_GPIO0->FIOCLR1 = 0X04;
-					LPC_GPIO1->FIOSET3 = 0XA0;
-					LPC_GPIO2->FIOCLR1 = 0X02;
-					triacToggle = true;
-				} else { 
-					LPC_GPIO0->FIOSET1 = 0X04;
-					LPC_GPIO1->FIOCLR3 = 0XA0;
-					LPC_GPIO2->FIOSET1 = 0X02;
-					triacToggle = false;
-				}
+//			char checkstring1[16]={'A','l','t','i','u','m','\0'};
+//			char checkstring2[16]={'C','h','r','o','m','e','\0'};
+//			char checkstring3[16]={'S','h','o','w','D','e','\0'};
+			
+			char checkstring4[16]={'L','I','G','H','T','O','N','E',':','2','\0'};
+			char checkstring7[16]={'L','I','G','H','T','O','N','E',':','0','\0'};
+			char checkstring5[16]={'L','I','G','H','T','T','W','O',':','2','\0'};
+			char checkstring8[16]={'L','I','G','H','T','T','W','O',':','0','\0'};
+			char checkstring6[16]={'L','I','G','H','T','T','H','R','E','E',':','2','\0'};
+			char checkstring9[16]={'L','I','G','H','T','T','H','R','E','E',':','0','\0'};
+			
+//			if (strncmp(tempwhat, checkstring1, 6) == 0) {
+//				if (triacToggle == false) {
+//					LPC_GPIO0->FIOCLR1 |= 0X04;
+////					LPC_GPIO1->FIOSET3 = 0XA0;
+//					LPC_GPIO2->FIOCLR1 |= 0X02;
+//					triacToggle = true;
+//				} 
+//				else { 
+//					LPC_GPIO0->FIOSET1 = 0X04;
+////					LPC_GPIO1->FIOCLR3 = 0XA0;
+//					LPC_GPIO2->FIOSET1 = 0X02;
+//					triacToggle = false;
+//				}
+//				int s = 10;
+//				while (s > 1) {
+//					LPC_GPIO1->FIOCLR2 = 0XFF;
+//					osDelay(100);
+//					LPC_GPIO1->FIOSET2 = 0XFF;
+//					osDelay(100);
+//					s--;
+//				}
+//			} else if (strncmp(tempwhat, checkstring2, 6) == 0) {
+//					if (Toggle1 == false) {
+//					LPC_GPIO1->FIOSET3 |= 0X20;
+//					Toggle1 = true;
+//				} 
+//				else { 
+//					LPC_GPIO1->FIOCLR3 |= 0X20;
+//					Toggle1 = false;
+//				}
+//				int s = 10;
+//				while (s > 1) {
+//					LPC_GPIO1->FIOCLR2 = 0XFF;
+//					osDelay(100);
+//					LPC_GPIO1->FIOSET2 = 0XFF;
+//					osDelay(100);
+//					s--;
+//				}
+//			} else if (strncmp(tempwhat, checkstring3, 6) == 0) {
+//					if (Toggle2 == false) {
+//					LPC_GPIO1->FIOSET3 |= 0X80;
+//					Toggle2 = true;
+//				} 
+//				else {
+//					LPC_GPIO1->FIOCLR3 |= 0X80;
+//					Toggle2 = false;
+//				}
+//				int s = 10;
+//				while (s > 1) {
+//					LPC_GPIO1->FIOCLR2 = 0XFF;
+//					osDelay(100);
+//					LPC_GPIO1->FIOSET2 = 0XFF;
+//					osDelay(100);
+//					s--;
+//				}
+//			}
+			
+			if (strncmp(tempwhat, checkstring4, 10) == 0) {
+				LPC_GPIO0->FIOCLR1 |= 0X04;
+//					LPC_GPIO1->FIOSET3 = 0XA0;
+				LPC_GPIO2->FIOCLR1 |= 0X02;
 				int s = 10;
 				while (s > 1) {
 					LPC_GPIO1->FIOCLR2 = 0XFF;
@@ -324,6 +388,58 @@ void heartBeatThread(void const *arg) {
 					osDelay(100);
 					s--;
 				}
+			} else if (strncmp(tempwhat, checkstring7, 10) == 0){ 
+					LPC_GPIO0->FIOSET1 = 0X04;
+//				LPC_GPIO1->FIOCLR3 = 0XA0;
+					LPC_GPIO2->FIOSET1 = 0X02;
+					int s = 10;
+					while (s > 1) {
+						LPC_GPIO1->FIOCLR2 = 0XFF;
+						osDelay(100);
+						LPC_GPIO1->FIOSET2 = 0XFF;
+						osDelay(100);
+						s--;
+					}
+			}	else if (strncmp(tempwhat, checkstring5, 10) == 0) {
+					LPC_GPIO1->FIOSET3 |= 0X20;
+					int s = 10;
+					while (s > 1) {
+						LPC_GPIO1->FIOCLR2 = 0XFF;
+						osDelay(100);
+						LPC_GPIO1->FIOSET2 = 0XFF;
+						osDelay(100);
+						s--;
+					}
+			}	else if (strncmp(tempwhat, checkstring8, 10) == 0){ 
+					LPC_GPIO1->FIOCLR3 |= 0X20;
+					int s = 10;
+					while (s > 1) {
+						LPC_GPIO1->FIOCLR2 = 0XFF;
+						osDelay(100);
+						LPC_GPIO1->FIOSET2 = 0XFF;
+						osDelay(100);
+						s--;
+					}
+			}	else if (strncmp(tempwhat, checkstring6, 12) == 0) {
+					LPC_GPIO1->FIOSET3 |= 0X80;
+					int s = 10;
+					while (s > 1) {
+						LPC_GPIO1->FIOCLR2 = 0XFF;
+						osDelay(100);
+						LPC_GPIO1->FIOSET2 = 0XFF;
+						osDelay(100);
+						s--;
+					}
+			}	else if (strncmp(tempwhat, checkstring9, 12) == 0){
+					LPC_GPIO1->FIOCLR3 |= 0X80;
+					int s = 10;
+					while (s > 1) {
+						LPC_GPIO1->FIOCLR2 = 0XFF;
+						osDelay(100);
+						LPC_GPIO1->FIOSET2 = 0XFF;
+						osDelay(100);
+						s--;
+					}
 			}
 		}
 	}
